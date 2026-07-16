@@ -22,44 +22,20 @@ body{
 
 font-family:
 "Inter",
-"Segoe UI",
 Arial,
 sans-serif;
 
-background:#f7f7f8;
+background:#faf9f6;
 
 color:#222;
 
-line-height:1.7;
-
 }
 
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-
-
-/* Header */
 
 
 header{
 
-position:sticky;
-
-top:0;
-
-z-index:99;
-
-background:
-rgba(255,255,255,.85);
-
-backdrop-filter:blur(15px);
+height:90px;
 
 display:flex;
 
@@ -67,9 +43,17 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:18px 8%;
+padding:0 8%;
+
+background:white;
 
 border-bottom:1px solid #eee;
+
+position:sticky;
+
+top:0;
+
+z-index:10;
 
 }
 
@@ -86,12 +70,11 @@ gap:15px;
 }
 
 
-
 .logo img{
 
-width:130px;
+width:55px;
 
-height:65px;
+height:55px;
 
 object-fit:contain;
 
@@ -109,59 +92,63 @@ font-size:22px;
 
 nav a{
 
-margin-left:25px;
+margin-left:30px;
 
-font-size:15px;
+text-decoration:none;
 
-color:#555;
-
-}
-
-
-
-nav a:hover{
-
-color:#000;
+color:#333;
 
 }
 
-
-
-
-
-/* Hero */
 
 
 .hero{
 
 
-min-height:700px;
+height:560px;
 
 display:flex;
 
 align-items:center;
 
-justify-content:center;
-
-text-align:center;
-
-padding:80px 20px;
+padding:0 8%;
 
 
 background:
 
-radial-gradient(
-circle at top left,
-#e8dcc5,
-transparent 35%
+linear-gradient(
+90deg,
+rgba(250,248,243,.95),
+rgba(250,248,243,.3)
 ),
 
-linear-gradient(
-135deg,
-#ffffff,
-#f1f1f1
-);
+url("hero.jpg");
 
+
+background-size:cover;
+
+background-position:center;
+
+
+}
+
+
+
+.hero-content{
+
+max-width:650px;
+
+}
+
+
+
+.hero small{
+
+color:#b08b45;
+
+font-size:16px;
+
+letter-spacing:2px;
 
 }
 
@@ -169,14 +156,11 @@ linear-gradient(
 
 .hero h1{
 
-font-size:60px;
+font-size:64px;
 
-max-width:900px;
+line-height:1.1;
 
-margin:auto;
-
-line-height:1.15;
-
+margin:20px 0;
 
 }
 
@@ -186,12 +170,7 @@ line-height:1.15;
 
 font-size:20px;
 
-color:#666;
-
-max-width:650px;
-
-margin:30px auto;
-
+color:#555;
 
 }
 
@@ -199,29 +178,19 @@ margin:30px auto;
 
 .btn{
 
-
 display:inline-block;
+
+margin-top:35px;
+
+padding:15px 35px;
 
 background:#111;
 
 color:white;
 
-padding:15px 38px;
-
 border-radius:50px;
 
-transition:.3s;
-
-
-}
-
-
-
-.btn:hover{
-
-transform:translateY(-3px);
-
-background:#333;
+text-decoration:none;
 
 }
 
@@ -237,16 +206,6 @@ padding:90px 8%;
 
 
 
-.container{
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-
-
 .title{
 
 text-align:center;
@@ -256,12 +215,9 @@ margin-bottom:50px;
 }
 
 
-
 .title h2{
 
-font-size:40px;
-
-margin-bottom:10px;
+font-size:42px;
 
 }
 
@@ -271,84 +227,103 @@ margin-bottom:10px;
 
 color:#777;
 
+margin-top:10px;
+
 }
 
 
 
 
 
-/* cards */
-
-
-.cards{
-
+.projects{
 
 display:grid;
 
 grid-template-columns:
 
-repeat(auto-fit,minmax(250px,1fr));
+repeat(3,1fr);
 
 gap:30px;
 
-
 }
 
 
 
-.card{
-
+.project{
 
 background:white;
 
-padding:35px;
-
 border-radius:20px;
+
+overflow:hidden;
 
 box-shadow:
 
-0 10px 30px rgba(0,0,0,.06);
+0 15px 40px rgba(0,0,0,.08);
 
 transition:.3s;
 
+}
+
+
+
+.project:hover{
+
+transform:translateY(-10px);
 
 }
 
 
 
-.card:hover{
+.project img{
 
+width:100%;
 
-transform:translateY(-8px);
+height:260px;
 
-
-}
-
-
-
-.card h3{
-
-margin-bottom:15px;
-
-font-size:22px;
+object-fit:cover;
 
 }
 
 
 
+.project-content{
+
+padding:30px;
+
+}
 
 
 
-/* About */
+.project h3{
+
+font-size:24px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.category{
+
+color:#b08b45;
+
+font-size:14px;
+
+font-weight:bold;
+
+}
+
 
 
 .about{
-
 
 background:#111;
 
 color:white;
 
+text-align:center;
 
 }
 
@@ -360,136 +335,55 @@ max-width:800px;
 
 margin:auto;
 
-text-align:center;
+color:#ccc;
 
 font-size:18px;
 
-color:#ccc;
-
 }
 
 
 
-
-
-/* Process */
-
-
-.step{
-
-background:white;
-
-border-radius:20px;
-
-padding:30px;
-
-}
-
-
-
-
-
-/* Portfolio */
-
-
-.portfolio-item{
-
-
-height:220px;
-
-background:
-
-linear-gradient(
-135deg,
-#222,
-#555
-);
-
-
-border-radius:20px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:22px;
-
-
-}
-
-
-
-
-/* Stats */
-
-
-.stats{
-
+.services{
 
 display:grid;
 
 grid-template-columns:
 
-repeat(auto-fit,minmax(200px,1fr));
+repeat(4,1fr);
 
-gap:20px;
-
+gap:25px;
 
 }
 
 
 
-.stat{
-
+.service{
 
 background:white;
 
 padding:35px;
 
-text-align:center;
-
 border-radius:20px;
 
-}
+box-shadow:
 
-
-.stat h3{
-
-font-size:35px;
+0 10px 30px rgba(0,0,0,.05);
 
 }
 
-
-
-
-
-/* Contact */
 
 
 .contact{
 
-
-background:
-
-linear-gradient(
-135deg,
-#111,
-#292929
-);
-
+background:#111;
 
 color:white;
+
+text-align:center;
 
 border-radius:30px;
 
 padding:60px;
-
-text-align:center;
-
 
 }
 
@@ -511,43 +405,41 @@ background:white;
 
 color:#111;
 
-margin-top:25px;
-
-
 }
-
-
-
-
 
 
 
 footer{
 
+background:#0c0c0c;
 
-background:#0d0d0d;
+color:#999;
 
-color:#aaa;
+padding:35px;
 
 text-align:center;
-
-padding:40px;
-
 
 }
 
 
 
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+
+.projects,
+.services{
+
+grid-template-columns:1fr;
+
+}
 
 
 .hero h1{
 
-font-size:38px;
+font-size:40px;
 
 }
-
 
 
 nav{
@@ -557,20 +449,10 @@ display:none;
 }
 
 
-
-.contact{
-
-padding:35px 20px;
-
 }
-
-
-}
-
 
 
 </style>
-
 
 </head>
 
@@ -585,7 +467,6 @@ padding:35px 20px;
 
 <div class="logo">
 
-
 <img src="logo.png">
 
 
@@ -597,7 +478,6 @@ padding:35px 20px;
 
 </div>
 
-
 </div>
 
 
@@ -606,9 +486,9 @@ padding:35px 20px;
 
 <a href="#about">About</a>
 
-<a href="#services">Services</a>
-
 <a href="#portfolio">Portfolio</a>
+
+<a href="#services">Services</a>
 
 <a href="#contact">Contact</a>
 
@@ -624,23 +504,24 @@ padding:35px 20px;
 <section class="hero">
 
 
-<div>
+<div class="hero-content">
+
+
+<small>OUR PORTFOLIO</small>
 
 
 <h1>
 
-Creative Design Solutions For Modern Brands
+Selected Creative Works
 
 </h1>
 
 
 <p>
 
-We create professional visual identities,
+Professional logo, branding and packaging design solutions
 
-logos and marketing materials that help businesses
-
-communicate with confidence.
+for modern businesses.
 
 </p>
 
@@ -651,197 +532,6 @@ communicate with confidence.
 Start Your Project
 
 </a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="about" class="about">
-
-
-<div class="container">
-
-
-<div class="title">
-
-<h2>About Muchin</h2>
-
-</div>
-
-
-<p>
-
-Muchin Design Studio focuses on creative graphic design
-
-solutions for businesses and individuals.
-
-We combine strategy, aesthetics and practical design
-
-to create meaningful visual experiences.
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="services">
-
-
-<div class="container">
-
-
-<div class="title">
-
-<h2>Our Services</h2>
-
-<p>Professional design solutions</p>
-
-</div>
-
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>Logo Design</h3>
-
-<p>
-
-Unique logo concepts designed around your brand identity.
-
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Brand Identity</h3>
-
-<p>
-
-Colors, typography and visual guidelines.
-
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Packaging Design</h3>
-
-<p>
-
-Creative layouts for product presentation.
-
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Marketing Design</h3>
-
-<p>
-
-Social media graphics, brochures and promotional materials.
-
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-
-<div class="container">
-
-
-<div class="title">
-
-<h2>Our Process</h2>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>01 Discovery</h3>
-
-<p>Understand your requirements.</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>02 Design</h3>
-
-<p>Create concepts and solutions.</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>03 Revision</h3>
-
-<p>Improve details with feedback.</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>04 Delivery</h3>
-
-<p>Provide final design files.</p>
-
-</div>
-
-
-</div>
 
 
 </div>
@@ -858,44 +548,140 @@ Social media graphics, brochures and promotional materials.
 <section id="portfolio">
 
 
-<div class="container">
-
-
 <div class="title">
 
-<h2>Portfolio</h2>
+<h2>Featured Projects</h2>
 
-<p>Selected creative works</p>
+<p>
+
+A selection of creative design projects
+
+</p>
+
+</div>
+
+
+
+<div class="projects">
+
+
+<div class="project">
+
+
+<img src="logo-project.jpg">
+
+
+<div class="project-content">
+
+<span class="category">
+
+LOGO DESIGN
+
+</span>
+
+
+<h3>
+
+Novara Real Estate
+
+</h3>
+
+
+<p>
+
+Modern and elegant logo identity
+
+designed for professional brands.
+
+</p>
+
+
+</div>
+
 
 </div>
 
 
 
-<div class="cards">
 
 
-<div class="portfolio-item">
+<div class="project">
 
-Brand Identity
+
+<img src="packaging-project.jpg">
+
+
+<div class="project-content">
+
+<span class="category">
+
+PACKAGING DESIGN
+
+</span>
+
+
+<h3>
+
+Verda Skincare
+
+</h3>
+
+
+<p>
+
+Minimal packaging design focusing
+
+on natural and premium feeling.
+
+</p>
+
 
 </div>
 
 
-<div class="portfolio-item">
+</div>
 
-Packaging Concept
+
+
+
+
+
+<div class="project">
+
+
+<img src="branding-project.jpg">
+
+
+<div class="project-content">
+
+<span class="category">
+
+BRAND IDENTITY
+
+</span>
+
+
+<h3>
+
+Altiora Consulting
+
+</h3>
+
+
+<p>
+
+Complete visual identity system
+
+including logo and brand materials.
+
+</p>
+
 
 </div>
 
 
-<div class="portfolio-item">
-
-Digital Graphics
-
 </div>
 
-
-</div>
 
 
 </div>
@@ -909,41 +695,87 @@ Digital Graphics
 
 
 
-<section>
+
+<section id="about" class="about">
 
 
-<div class="container">
+<h2>
+
+About Muchin
+
+</h2>
 
 
-<div class="stats">
+<br>
 
 
-<div class="stat">
+<p>
 
-<h3>01</h3>
+Muchin Design Studio provides creative design services
 
-<p>Creative Studio</p>
+including logo design, branding and packaging solutions.
+
+We combine strategy and aesthetics to create professional
+
+visual identities.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="services">
+
+
+<div class="title">
+
+<h2>Services</h2>
 
 </div>
 
 
-<div class="stat">
 
-<h3>04</h3>
+<div class="services">
 
-<p>Main Services</p>
+
+<div class="service">
+
+<h3>Logo Design</h3>
+
+<p>Custom logo concepts for businesses.</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Brand Identity</h3>
+
+<p>Complete visual style development.</p>
 
 </div>
 
 
-<div class="stat">
+<div class="service">
 
-<h3>100%</h3>
+<h3>Packaging</h3>
 
-<p>Custom Design</p>
+<p>Creative product presentation design.</p>
 
 </div>
 
+
+<div class="service">
+
+<h3>Marketing Design</h3>
+
+<p>Digital and print materials.</p>
 
 </div>
 
@@ -962,33 +794,38 @@ Digital Graphics
 <section id="contact">
 
 
-<div class="container">
-
-
 <div class="contact">
 
 
-<h2>Let's Work Together</h2>
+<h2>
+
+Let's Work Together
+
+</h2>
 
 
-<p>Email: 867582988@gmail.com</p>
+<p>
 
-<p>WhatsApp: +86 15913169924</p>
+Email: 867582988@gmail.com
+
+</p>
+
+
+<p>
+
+WhatsApp: +86 15913169924
+
+</p>
 
 
 
 <a class="btn"
 
-href="https://www.paypal.me/rikhuang2002"
-
-target="_blank">
+href="https://www.paypal.me/rikhuang2002">
 
 Pay For Design Service
 
 </a>
-
-
-</div>
 
 
 </div>
@@ -1001,19 +838,14 @@ Pay For Design Service
 
 
 
-<footer>
 
-<p>
+<footer>
 
 © 2026 Muchin Design Studio
 
-</p>
+<br>
 
-<p>
-<a href="privacy.html">Privacy Policy</a>
-&nbsp; · &nbsp;
-<a href="terms.html">Terms of Service</a>
-</p>
+Privacy Policy · Terms of Service
 
 </footer>
 
