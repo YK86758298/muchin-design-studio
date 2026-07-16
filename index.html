@@ -1,78 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Muchin Design Studio</title>
 
 <style>
+
 body{
-font-family:Arial;
-max-width:900px;
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f8;
+color:#333;
+}
+
+header{
+background:#111827;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+height:60px;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+color:#666;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#0070ba;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
+}
+
+section{
+max-width:1200px;
 margin:auto;
-padding:50px;
-background:#f5f5f5;
+padding:70px 20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.contact{
+background:white;
 padding:40px;
 border-radius:12px;
-box-shadow:0 0 15px rgba(0,0,0,.08);
 }
 
-h1{
-color:#222;
-}
-
-button{
-background:#0070ba;
+footer{
+background:#111827;
 color:white;
-border:none;
-padding:14px 28px;
-font-size:18px;
-border-radius:6px;
-cursor:pointer;
+text-align:center;
+padding:30px;
+margin-top:50px;
 }
 
-button:hover{
-background:#005ea6;
-}
 </style>
 
 </head>
 
 <body>
 
-<div class="card">
+<header>
 
-<h1>Muchin Design Studio</h1>
+<div class="logo">
 
-<p>
-Professional graphic design services for businesses and individuals.
-</p>
+<img src="logo.png" alt="Logo">
 
-<h2>Service</h2>
+<div>
 
-<ul>
-<li>Logo Design</li>
-<li>Brand Identity</li>
-<li>Business Card Design</li>
-<li>Social Media Graphics</li>
-</ul>
+<h2>Muchin Design Studio</h2>
 
-<h2>Contact</h2>
+<div>Creative Design Solutions</div>
 
-<p>Email：867582988@gmail.com</p>
+</div>
 
-<p>WhatsApp：+86 15913169924</p>
+</div>
 
-<h2>Payment</h2>
+<nav>
 
-<a href="https://www.paypal.me/rikhuang2002" target="_blank">
-<button>Pay with PayPal</button>
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#portfolio">Portfolio</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<div class="hero">
+
+<h1>Professional Graphic Design Studio</h1>
+
+<p>Helping businesses build strong visual identities.</p>
+
+<a class="button" href="https://www.paypal.me/rikhuang2002" target="_blank">
+
+Pay with PayPal
+
 </a>
 
 </div>
 
+<section id="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Muchin Design Studio provides creative design services for businesses and entrepreneurs.
+
+We specialize in logo design, branding, packaging and digital graphics.
+
+</p>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Logo Design</h3>
+
+<p>Professional custom logo design.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Brand Identity</h3>
+
+<p>Complete branding solutions.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Packaging Design</h3>
+
+<p>Creative packaging for retail products.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Social Media Design</h3>
+
+<p>Graphics for online marketing.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2>Portfolio</h2>
+
+<div class="gallery">
+
+<img src="work1.jpg">
+
+<img src="work2.jpg">
+
+<img src="work3.jpg">
+
+<img src="work4.jpg">
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h2>Contact</h2>
+
+<p>Email: 867582988@gmail.com</p>
+
+<p>WhatsApp: +86 15913169924</p>
+
+<p>Business Hours: Monday - Friday, 09:00 - 18:00 (GMT+8)</p>
+
+<a class="button" href="https://www.paypal.me/rikhuang2002">
+
+Pay with PayPal
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Muchin Design Studio
+
+</footer>
+
 </body>
+
 </html>
