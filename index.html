@@ -4,76 +4,182 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muchin Design Studio | Creative Design Services</title>
+<title>Muchin Design Studio</title>
+
 
 <style>
 
 *{
+margin:0;
+padding:0;
 box-sizing:border-box;
 }
 
+
 body{
-margin:0;
-font-family:"Arial",sans-serif;
-color:#333;
-background:#fafafa;
-line-height:1.6;
+
+font-family:
+"Inter",
+"Segoe UI",
+Arial,
+sans-serif;
+
+background:#f7f7f8;
+
+color:#222;
+
+line-height:1.7;
+
 }
+
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
+
+/* Header */
 
 
 header{
-background:white;
-padding:20px 8%;
+
+position:sticky;
+
+top:0;
+
+z-index:99;
+
+background:
+rgba(255,255,255,.85);
+
+backdrop-filter:blur(15px);
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
+padding:18px 8%;
+
 border-bottom:1px solid #eee;
+
 }
+
 
 
 .logo{
+
 display:flex;
+
 align-items:center;
+
 gap:15px;
+
 }
+
 
 
 .logo img{
-width:70px;
-height:70px;
+
+width:65px;
+
+height:65px;
+
 object-fit:contain;
+
 }
+
 
 
 .logo h2{
-margin:0;
+
 font-size:22px;
+
 }
+
 
 
 nav a{
+
 margin-left:25px;
-text-decoration:none;
-color:#333;
+
+font-size:15px;
+
+color:#555;
+
 }
+
+
+
+nav a:hover{
+
+color:#000;
+
+}
+
+
+
+
+
+/* Hero */
 
 
 .hero{
 
-padding:100px 10%;
+
+min-height:700px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 text-align:center;
-background:white;
+
+padding:80px 20px;
+
+
+background:
+
+radial-gradient(
+circle at top left,
+#e8dcc5,
+transparent 35%
+),
+
+linear-gradient(
+135deg,
+#ffffff,
+#f1f1f1
+);
+
 
 }
+
 
 
 .hero h1{
 
-font-size:48px;
+font-size:60px;
+
+max-width:900px;
+
+margin:auto;
+
+line-height:1.15;
+
 
 }
+
 
 
 .hero p{
@@ -82,135 +188,418 @@ font-size:20px;
 
 color:#666;
 
-max-width:700px;
+max-width:650px;
 
-margin:auto;
+margin:30px auto;
+
 
 }
+
 
 
 .btn{
 
+
 display:inline-block;
 
-margin-top:30px;
-
-padding:14px 35px;
-
-background:#111827;
+background:#111;
 
 color:white;
 
-border-radius:6px;
+padding:15px 38px;
 
-text-decoration:none;
+border-radius:50px;
+
+transition:.3s;
+
 
 }
+
+
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+background:#333;
+
+}
+
+
+
 
 
 section{
 
-padding:70px 10%;
+padding:90px 8%;
 
 }
+
 
 
 .container{
 
-max-width:1100px;
+max-width:1200px;
 
 margin:auto;
 
 }
+
 
 
 .title{
 
 text-align:center;
 
-margin-bottom:40px;
+margin-bottom:50px;
 
 }
+
+
+
+.title h2{
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.title p{
+
+color:#777;
+
+}
+
+
+
+
+
+/* cards */
 
 
 .cards{
 
+
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:
 
-gap:25px;
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
 
 }
+
 
 
 .card{
 
+
 background:white;
 
-padding:30px;
+padding:35px;
 
-border-radius:12px;
+border-radius:20px;
 
-box-shadow:0 5px 20px rgba(0,0,0,.05);
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.06);
+
+transition:.3s;
+
 
 }
+
+
+
+.card:hover{
+
+
+transform:translateY(-8px);
+
+
+}
+
 
 
 .card h3{
 
-margin-top:0;
+margin-bottom:15px;
+
+font-size:22px;
 
 }
 
 
-.process{
 
-display:flex;
 
-flex-wrap:wrap;
 
-gap:20px;
+
+/* About */
+
+
+.about{
+
+
+background:#111;
+
+color:white;
+
 
 }
+
+
+
+.about p{
+
+max-width:800px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:18px;
+
+color:#ccc;
+
+}
+
+
+
+
+
+/* Process */
 
 
 .step{
 
-flex:1;
+background:white;
 
-min-width:200px;
+border-radius:20px;
+
+padding:30px;
+
+}
+
+
+
+
+
+/* Portfolio */
+
+
+.portfolio-item{
+
+
+height:220px;
+
+background:
+
+linear-gradient(
+135deg,
+#222,
+#555
+);
+
+
+border-radius:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:22px;
+
+
+}
+
+
+
+
+/* Stats */
+
+
+.stats{
+
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+
+}
+
+
+
+.stat{
+
 
 background:white;
 
-padding:25px;
+padding:35px;
 
-border-radius:10px;
+text-align:center;
+
+border-radius:20px;
 
 }
+
+
+.stat h3{
+
+font-size:35px;
+
+}
+
+
+
+
+
+/* Contact */
+
+
+.contact{
+
+
+background:
+
+linear-gradient(
+135deg,
+#111,
+#292929
+);
+
+
+color:white;
+
+border-radius:30px;
+
+padding:60px;
+
+text-align:center;
+
+
+}
+
+
+
+.contact p{
+
+margin:10px;
+
+color:#ddd;
+
+}
+
+
+
+.contact .btn{
+
+background:white;
+
+color:#111;
+
+margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+footer{
+
+
+background:#0d0d0d;
+
+color:#aaa;
+
+text-align:center;
+
+padding:40px;
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+.contact{
+
+padding:35px 20px;
+
+}
+
+
+}
+
+
+
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <header>
+
 
 <div class="logo">
 
-<img src="logo.png" alt="Muchin Design Studio Logo">
+
+<img src="logo.png">
+
 
 <div>
 
 <h2>Muchin Design Studio</h2>
 
-<small>Creative Design Solutions</small>
+<p>Creative Design Services</p>
 
 </div>
 
+
 </div>
+
 
 
 <nav>
@@ -225,32 +614,47 @@ border-radius:10px;
 
 </nav>
 
+
 </header>
+
+
 
 
 
 <section class="hero">
 
 
-<h1>Creative Design Solutions For Modern Businesses</h1>
+<div>
+
+
+<h1>
+
+Creative Design Solutions For Modern Brands
+
+</h1>
 
 
 <p>
 
-Muchin Design Studio provides professional graphic design services,
+We create professional visual identities,
 
-helping businesses create memorable visual identities and attractive
+logos and marketing materials that help businesses
 
-marketing materials.
+communicate with confidence.
 
 </p>
 
 
+
 <a class="btn" href="#contact">
 
-Start A Project
+Start Your Project
 
 </a>
+
+
+
+</div>
 
 
 </section>
@@ -259,7 +663,7 @@ Start A Project
 
 
 
-<section id="about">
+<section id="about" class="about">
 
 
 <div class="container">
@@ -267,29 +671,20 @@ Start A Project
 
 <div class="title">
 
-<h2>About Us</h2>
+<h2>About Muchin</h2>
 
 </div>
 
 
 <p>
 
-Muchin Design Studio is a creative design service provider focusing on
+Muchin Design Studio focuses on creative graphic design
 
-brand identity, logo creation and visual communication.
+solutions for businesses and individuals.
 
-We combine creativity, simplicity and practical business needs to
+We combine strategy, aesthetics and practical design
 
-deliver professional design solutions.
-
-</p>
-
-
-<p>
-
-Our goal is to help businesses present their ideas clearly through
-
-unique and effective visual designs.
+to create meaningful visual experiences.
 
 </p>
 
@@ -298,6 +693,7 @@ unique and effective visual designs.
 
 
 </section>
+
 
 
 
@@ -314,7 +710,10 @@ unique and effective visual designs.
 
 <h2>Our Services</h2>
 
+<p>Professional design solutions</p>
+
 </div>
+
 
 
 <div class="cards">
@@ -326,9 +725,7 @@ unique and effective visual designs.
 
 <p>
 
-Custom logo concepts designed according to your brand positioning
-
-and business requirements.
+Unique logo concepts designed around your brand identity.
 
 </p>
 
@@ -342,9 +739,7 @@ and business requirements.
 
 <p>
 
-Create consistent visual styles including colors, typography and
-
-brand guidelines.
+Colors, typography and visual guidelines.
 
 </p>
 
@@ -358,9 +753,7 @@ brand guidelines.
 
 <p>
 
-Creative packaging layouts that improve product presentation
-
-and customer recognition.
+Creative layouts for product presentation.
 
 </p>
 
@@ -370,13 +763,11 @@ and customer recognition.
 
 <div class="card">
 
-<h3>Marketing Materials</h3>
+<h3>Marketing Design</h3>
 
 <p>
 
-Design support for business cards, brochures, posters and
-
-digital marketing graphics.
+Social media graphics, brochures and promotional materials.
 
 </p>
 
@@ -391,6 +782,7 @@ digital marketing graphics.
 
 
 </section>
+
 
 
 
@@ -405,66 +797,46 @@ digital marketing graphics.
 
 <div class="title">
 
-<h2>Our Design Process</h2>
+<h2>Our Process</h2>
 
 </div>
 
 
+<div class="cards">
 
-<div class="process">
 
+<div class="card">
 
-<div class="step">
+<h3>01 Discovery</h3>
 
-<h3>01. Discovery</h3>
-
-<p>
-
-Understand your business goals, target audience and design requirements.
-
-</p>
+<p>Understand your requirements.</p>
 
 </div>
 
 
+<div class="card">
 
-<div class="step">
+<h3>02 Design</h3>
 
-<h3>02. Concept</h3>
-
-<p>
-
-Develop creative directions and initial design concepts.
-
-</p>
+<p>Create concepts and solutions.</p>
 
 </div>
 
 
+<div class="card">
 
-<div class="step">
+<h3>03 Revision</h3>
 
-<h3>03. Revision</h3>
-
-<p>
-
-Adjust designs based on your feedback and improve details.
-
-</p>
+<p>Improve details with feedback.</p>
 
 </div>
 
 
+<div class="card">
 
-<div class="step">
+<h3>04 Delivery</h3>
 
-<h3>04. Delivery</h3>
-
-<p>
-
-Provide final files suitable for professional use.
-
-</p>
+<p>Provide final design files.</p>
 
 </div>
 
@@ -476,6 +848,7 @@ Provide final files suitable for professional use.
 
 
 </section>
+
 
 
 
@@ -492,7 +865,7 @@ Provide final files suitable for professional use.
 
 <h2>Portfolio</h2>
 
-<p>Selected design works</p>
+<p>Selected creative works</p>
 
 </div>
 
@@ -501,42 +874,23 @@ Provide final files suitable for professional use.
 <div class="cards">
 
 
-<div class="card">
+<div class="portfolio-item">
 
-<h3>Brand Logo Project</h3>
-
-<p>
-
-Modern logo design concept for business identity.
-
-</p>
+Brand Identity
 
 </div>
 
 
-<div class="card">
+<div class="portfolio-item">
 
-<h3>Packaging Concept</h3>
-
-<p>
-
-Creative packaging design focused on product presentation.
-
-</p>
+Packaging Concept
 
 </div>
 
 
+<div class="portfolio-item">
 
-<div class="card">
-
-<h3>Marketing Graphics</h3>
-
-<p>
-
-Visual materials designed for online promotion.
-
-</p>
+Digital Graphics
 
 </div>
 
@@ -548,6 +902,7 @@ Visual materials designed for online promotion.
 
 
 </section>
+
 
 
 
@@ -560,64 +915,32 @@ Visual materials designed for online promotion.
 <div class="container">
 
 
-<div class="title">
-
-<h2>Pricing</h2>
-
-</div>
+<div class="stats">
 
 
-<div class="cards">
+<div class="stat">
 
+<h3>01</h3>
 
-<div class="card">
-
-<h3>Logo Design</h3>
-
-<p>
-
-Starting from USD 50
-
-</p>
-
-<p>
-
-Includes concept development and final design files.
-
-</p>
+<p>Creative Studio</p>
 
 </div>
 
 
+<div class="stat">
 
-<div class="card">
+<h3>04</h3>
 
-<h3>Brand Package</h3>
-
-<p>
-
-Custom quotation
-
-</p>
-
-<p>
-
-Logo, color system and brand materials.
-
-</p>
+<p>Main Services</p>
 
 </div>
 
 
-<div class="card">
+<div class="stat">
 
-<h3>Custom Design</h3>
+<h3>100%</h3>
 
-<p>
-
-Contact us for project details.
-
-</p>
+<p>Custom Design</p>
 
 </div>
 
@@ -630,66 +953,6 @@ Contact us for project details.
 
 </section>
 
-
-
-
-
-<section>
-
-
-<div class="container">
-
-
-<div class="title">
-
-<h2>Frequently Asked Questions</h2>
-
-</div>
-
-
-<div class="card">
-
-
-<h3>How long does a design project take?</h3>
-
-<p>
-
-Most projects can be completed within several business days depending
-
-on complexity.
-
-</p>
-
-
-<h3>Can I request revisions?</h3>
-
-<p>
-
-Yes. We communicate with clients during the design process to achieve
-
-the expected result.
-
-</p>
-
-
-<h3>What file formats will I receive?</h3>
-
-<p>
-
-Final files can include common formats such as PNG, JPG, PDF and
-
-editable source files when required.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
 
 
 
@@ -702,33 +965,23 @@ editable source files when required.
 <div class="container">
 
 
-<div class="title">
-
-<h2>Contact Us</h2>
-
-</div>
+<div class="contact">
 
 
-<div class="card">
+<h2>Let's Work Together</h2>
 
 
 <p>Email: 867582988@gmail.com</p>
 
-
 <p>WhatsApp: +86 15913169924</p>
 
 
-<p>
 
-We welcome business inquiries and custom design projects.
+<a class="btn"
 
-</p>
+href="https://www.paypal.me/rikhuang2002"
 
-
-
-<!-- Only one payment button -->
-
-<a class="btn" href="https://www.paypal.me/rikhuang2002" target="_blank">
+target="_blank">
 
 Pay For Design Service
 
@@ -750,20 +1003,17 @@ Pay For Design Service
 
 <footer>
 
-
 <p>
 
-© 2026 Muchin Design Studio. All Rights Reserved.
+© 2026 Muchin Design Studio
 
 </p>
 
-
 <p>
 
-Privacy Policy | Terms of Service
+Privacy Policy · Terms of Service
 
 </p>
-
 
 </footer>
 
