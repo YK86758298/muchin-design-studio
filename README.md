@@ -1,1 +1,1 @@
-# muchin-design
+# muchin-design-studio
