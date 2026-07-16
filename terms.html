@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Terms of Service for Muchin Design Studio.">
+<meta name="description" content="Terms of Service — Muchin Design Studio">
 <meta name="theme-color" content="#111111">
 <link rel="icon" type="image/png" href="logo.png">
 
@@ -22,6 +22,7 @@
   --color-bg: #faf9f6;
   --color-white: #ffffff;
   --color-dark: #111111;
+  --color-darker: #0c0c0c;
   --color-text: #222222;
   --color-text-light: #555555;
   --color-text-muted: #777777;
@@ -68,6 +69,9 @@ body {
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -75,6 +79,15 @@ body {
 a {
 
   transition: color .2s;
+
+}
+
+
+a:focus-visible {
+
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 
 }
 
@@ -89,10 +102,19 @@ a {
   height: 70px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 10;
+
+}
+
+
+.topbar-left {
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
 }
 
@@ -106,22 +128,20 @@ a {
   color: var(--color-text);
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border);
   background: var(--color-white);
-  transition: background .2s, border-color .2s, color .2s, transform .2s;
-  white-space: nowrap;
+  transition: background .2s, border-color .2s, color .2s;
 
 }
 
 
 .back-btn:hover {
 
-  background: var(--color-dark);
-  color: var(--color-white);
-  border-color: var(--color-dark);
-  transform: translateX(-2px);
+  background: #f5f5f5;
+  border-color: #ddd;
+  color: var(--color-accent);
 
 }
 
@@ -135,112 +155,116 @@ a {
 }
 
 
-.topbar-title {
+.topbar-label {
 
-  font-size: 14px;
-  color: var(--color-text-muted);
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-}
-
-
-/* ── Page Header ── */
-
-.page-header {
-
-  text-align: center;
-  padding: 70px 20px 40px;
-
-}
-
-
-.page-header h1 {
-
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -.01em;
-  margin-bottom: 12px;
-
-}
-
-
-.page-header p {
-
-  color: var(--color-text-muted);
   font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: .5px;
 
 }
 
 
-.page-header .divider {
+.topbar-right a {
 
-  width: 50px;
-  height: 3px;
-  background: var(--color-accent);
-  border-radius: 2px;
-  margin: 24px auto 0;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color .2s;
 
 }
 
 
-/* ── Content Card ── */
+.topbar-right a:hover {
 
-.content-card {
+  color: var(--color-accent);
 
-  max-width: 800px;
-  margin: 0 auto 80px;
-  padding: 50px 60px;
+}
+
+
+/* ── Main Content ── */
+
+.main {
+
+  flex: 1;
+  padding: 60px 8% 80px;
+
+}
+
+
+.container {
+
+  max-width: 780px;
+  margin: 0 auto;
   background: var(--color-white);
+  padding: 60px;
   border-radius: var(--radius-card);
   box-shadow: 0 10px 40px rgba(0,0,0,.06);
 
 }
 
 
-.content-card h2 {
+.container h1 {
+
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -.01em;
+
+}
+
+
+.updated {
+
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--color-border);
+
+}
+
+
+.container h2 {
 
   font-size: 20px;
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: 36px;
   margin-bottom: 12px;
-  padding-top: 30px;
-  border-top: 1px solid var(--color-border);
   color: var(--color-dark);
 
 }
 
 
-.content-card h2:first-child {
-
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-
-}
-
-
-.content-card h2 .num {
-
-  color: var(--color-accent);
-  font-weight: 700;
-  margin-right: 8px;
-
-}
-
-
-.content-card p {
+.container p {
 
   color: var(--color-text-light);
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.8;
 
 }
 
 
-.content-card a {
+.container ul {
+
+  color: var(--color-text-light);
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 22px;
+  margin-bottom: 8px;
+
+}
+
+
+.container li {
+
+  margin-bottom: 6px;
+
+}
+
+
+.container a {
 
   color: var(--color-accent);
   text-decoration: none;
@@ -250,7 +274,7 @@ a {
 }
 
 
-.content-card a:hover {
+.container a:hover {
 
   border-color: var(--color-accent);
 
@@ -259,28 +283,28 @@ a {
 
 /* ── Footer ── */
 
-.footer {
+footer {
 
-  text-align: center;
-  padding: 30px 20px;
+  background: var(--color-darker);
   color: var(--color-text-weak);
+  padding: 30px;
+  text-align: center;
   font-size: 13px;
-  border-top: 1px solid var(--color-border);
 
 }
 
 
-.footer a {
+footer a {
 
   color: var(--color-text-weak);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
   transition: color .2s, border-color .2s;
 
 }
 
 
-.footer a:hover {
+footer a:hover {
 
   color: var(--color-accent);
   border-color: var(--color-accent);
@@ -288,79 +312,39 @@ a {
 }
 
 
-/* ── Fade Animation ── */
-
-.fade-up {
-
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .6s ease, transform .6s ease;
-
-}
-
-
-.fade-up.visible {
-
-  opacity: 1;
-  transform: translateY(0);
-
-}
-
-
-/* ── Focus ── */
-
-a:focus-visible {
-
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: 4px;
-
-}
-
-
 /* ── Responsive ── */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   .topbar {
 
     padding: 0 5%;
+    height: 60px;
 
   }
 
-
-  .topbar-title {
+  .topbar-label {
 
     display: none;
 
   }
 
+  .main {
 
-  .page-header {
-
-    padding: 50px 20px 30px;
-
-  }
-
-
-  .page-header h1 {
-
-    font-size: 30px;
+    padding: 40px 5% 60px;
 
   }
 
+  .container {
 
-  .content-card {
-
-    margin: 0 16px 60px;
-    padding: 35px 28px;
+    padding: 35px 25px;
+    border-radius: 16px;
 
   }
 
+  .container h1 {
 
-  .content-card h2 {
-
-    font-size: 18px;
+    font-size: 28px;
 
   }
 
@@ -372,105 +356,150 @@ a:focus-visible {
 </head>
 
 
-
 <body>
 
 <!-- Top Bar -->
 <div class="topbar">
 
-<a href="index.html" class="back-btn">
+  <div class="topbar-left">
 
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M19 12H5"/>
-  <path d="M12 19l-7-7 7-7"/>
-</svg>
+    <a href="index.html" class="back-btn">
 
-Back to Home
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 
-</a>
+        <path d="M19 12H5"/>
 
-<span class="topbar-title">Terms of Service</span>
+        <path d="M12 19l-7-7 7-7"/>
 
-</div>
+      </svg>
 
+      Back
 
-<!-- Page Header -->
-<div class="page-header fade-up">
+    </a>
 
-<h1>Terms of Service</h1>
-<p>Last updated: May 2026</p>
-<div class="divider"></div>
+    <span class="topbar-label">Terms of Service</span>
+
+  </div>
+
+  <div class="topbar-right">
+
+    <a href="index.html">Muchin Design Studio</a>
+
+  </div>
 
 </div>
 
 
 <!-- Content -->
-<div class="content-card fade-up">
+<div class="main">
 
-<h2><span class="num">01</span>Service Description</h2>
-<p>Muchin Design Studio provides professional graphic design services, including logo design, branding materials, packaging design and other custom creative services.</p>
+  <div class="container">
 
-<h2><span class="num">02</span>Project Process</h2>
-<p>After receiving project requirements, we will communicate design concepts, provide revisions when necessary and deliver final files after completion.</p>
+    <h1>Terms of Service</h1>
 
-<h2><span class="num">03</span>Payment Terms</h2>
-<p>Payment is required according to the agreed project quotation. Payments may be processed through PayPal or other supported payment methods.</p>
+    <p class="updated">Last updated: May 2026</p>
 
-<h2><span class="num">04</span>Refund Policy</h2>
-<p>Due to the customized nature of design services, refunds are evaluated based on project progress and completed work. Please contact us as soon as possible if you have concerns regarding your order.</p>
+    <p>These terms of service ("Terms") govern your use of the website and design services provided by Muchin Design Studio. By accessing our website or engaging our services, you agree to these Terms.</p>
 
-<h2><span class="num">05</span>Intellectual Property</h2>
-<p>Final design ownership and usage rights will be transferred according to the agreement between the client and Muchin Design Studio.</p>
 
-<h2><span class="num">06</span>Contact</h2>
-<p>Email: <a href="mailto:867582988@qq.com">867582988@qq.com</a></p>
-<p>WhatsApp: <a href="https://wa.me/8615913169924" target="_blank" rel="noopener">+86 15913169924</a></p>
+    <h2>Services</h2>
+
+    <p>Muchin Design Studio provides creative design services including, but not limited to:</p>
+
+    <ul>
+
+      <li>Logo design</li>
+      <li>Brand identity development</li>
+      <li>Packaging design</li>
+      <li>Marketing and promotional design</li>
+
+    </ul>
+
+    <p>The specific scope, deliverables and timeline for each project will be agreed upon between both parties before work begins.</p>
+
+
+    <h2>Project Process</h2>
+
+    <p>Each project typically follows this workflow:</p>
+
+    <ul>
+
+      <li>Initial consultation and brief gathering</li>
+      <li>Concept development and initial drafts</li>
+      <li>Revisions based on client feedback</li>
+      <li>Final delivery of approved designs</li>
+
+    </ul>
+
+    <p>The number of revision rounds included will be specified at the start of each project. Additional revisions may incur extra charges.</p>
+
+
+    <h2>Payments</h2>
+
+    <p>Payment terms will be communicated and agreed upon before the start of each project. Payments are processed through third-party platforms such as PayPal. All payments are non-refundable once the design work has commenced, unless otherwise agreed in writing.</p>
+
+
+    <h2>Intellectual Property</h2>
+
+    <p>Upon full payment, the client receives usage rights to the final delivered designs for their intended business purposes. Muchin Design Studio retains the right to showcase completed work in portfolios, case studies and promotional materials unless a written agreement states otherwise.</p>
+
+    <p>Client-provided materials (logos, photos, text, etc.) remain the property of the client. The client is responsible for ensuring they have the rights to any materials provided to us.</p>
+
+
+    <h2>Client Responsibilities</h2>
+
+    <p>The client agrees to:</p>
+
+    <ul>
+
+      <li>Provide accurate and complete project briefs</li>
+      <li>Respond to requests for feedback in a timely manner</li>
+      <li>Ensure all provided content does not infringe on third-party rights</li>
+      <li>Review final deliverables carefully before approval</li>
+
+    </ul>
+
+
+    <h2>Limitation of Liability</h2>
+
+    <p>Muchin Design Studio provides design services on a best-effort basis. We are not liable for any indirect, incidental or consequential damages arising from the use of our designs. Our total liability shall not exceed the amount paid for the specific project in question.</p>
+
+
+    <h2>Third-Party Services</h2>
+
+    <p>Our website may contain links to third-party services (e.g., PayPal). We are not responsible for the terms, policies or practices of these third parties. Your use of such services is governed by their respective terms.</p>
+
+
+    <h2>Changes to These Terms</h2>
+
+    <p>We reserve the right to update these Terms at any time. Changes will be reflected on this page with an updated revision date. Continued use of our website or services after changes constitutes acceptance of the updated Terms.</p>
+
+
+    <h2>Governing Law</h2>
+
+    <p>These Terms shall be governed by and construed in accordance with the laws of the People's Republic of China.</p>
+
+
+    <h2>Contact Us</h2>
+
+    <p>If you have any questions about these Terms, please contact us:</p>
+
+    <p>Email: <a href="mailto:867582988@qq.com">867582988@qq.com</a></p>
+
+    <p>WhatsApp: <a href="https://wa.me/8615913169924" target="_blank" rel="noopener">+86 15913169924</a></p>
+
+  </div>
 
 </div>
 
 
 <!-- Footer -->
-<div class="footer">
+<footer>
 
-<p>© 2026 Muchin Design Studio &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  <p>© 2026 Muchin Design Studio</p>
 
-</div>
+</footer>
 
-
-<script>
-
-(function () {
-
-  var fadeEls = document.querySelectorAll('.fade-up');
-
-  if ('IntersectionObserver' in window) {
-
-    var observer = new IntersectionObserver(function (entries) {
-
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
-    }, { threshold: 0.1 });
-
-    fadeEls.forEach(function (el) { observer.observe(el); });
-
-  } else {
-
-    fadeEls.forEach(function (el) { el.classList.add('visible'); });
-
-  }
-
-})();
-
-</script>
 
 </body>
 
