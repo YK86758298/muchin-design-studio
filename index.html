@@ -339,7 +339,7 @@ align-items: center;
 padding: 80px var(--container-px);
 background:
   linear-gradient(90deg, rgba(250,248,243,.95), rgba(250,248,243,.3)),
-  url("hero.jpeg");
+  url("hero.png");
 background-color: var(--color-bg);
 background-size: cover;
 background-position: center;
@@ -471,6 +471,36 @@ font-size: 17px;
 }
 
 
+/* ── About ── */
+
+.about {
+
+background: var(--color-dark);
+color: var(--color-white);
+text-align: center;
+
+}
+
+
+.about h2 {
+
+font-size: 42px;
+font-weight: 700;
+
+}
+
+
+.about p {
+
+max-width: 800px;
+margin: 20px auto 0;
+color: #ccc;
+font-size: 18px;
+line-height: 1.8;
+
+}
+
+
 /* ── Projects ── */
 
 .projects {
@@ -556,36 +586,6 @@ color: var(--color-accent);
 font-size: 12px;
 font-weight: 700;
 letter-spacing: 2px;
-
-}
-
-
-/* ── About ── */
-
-.about {
-
-background: var(--color-dark);
-color: var(--color-white);
-text-align: center;
-
-}
-
-
-.about h2 {
-
-font-size: 42px;
-font-weight: 700;
-
-}
-
-
-.about p {
-
-max-width: 800px;
-margin: 20px auto 0;
-color: #ccc;
-font-size: 18px;
-line-height: 1.8;
 
 }
 
@@ -678,9 +678,9 @@ margin-bottom: 15px;
 .contact-info {
 
 display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 12px 30px;
+flex-direction: column;
+align-items: center;
+gap: 10px;
 margin-bottom: 30px;
 
 }
@@ -1050,6 +1050,17 @@ nav {
 
 
 
+<!-- About -->
+<section id="about" class="about">
+
+<h2 class="fade-up">About Muchin</h2>
+
+<p class="fade-up">Muchin Design Studio provides creative design services including logo design, branding and packaging solutions. We combine strategy and aesthetics to create professional visual identities.</p>
+
+</section>
+
+
+
 <!-- Portfolio -->
 <section id="portfolio">
 
@@ -1124,17 +1135,6 @@ nav {
 
 
 
-<!-- About -->
-<section id="about" class="about">
-
-<h2 class="fade-up">About Muchin</h2>
-
-<p class="fade-up">Muchin Design Studio provides creative design services including logo design, branding and packaging solutions. We combine strategy and aesthetics to create professional visual identities.</p>
-
-</section>
-
-
-
 <!-- Services -->
 <section id="services">
 
@@ -1195,6 +1195,7 @@ nav {
 
 <p>Email: <a href="mailto:867582988@qq.com">867582988@qq.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/8615913169924" target="_blank" rel="noopener">+86 15913169924</a></p>
+<p>Address: No. 6, Lane 4, Ermuqi Road, Shaxia Street, Huangshatou Village, Xintang Town, Zengcheng District, Guangzhou City</p>
 
 </div>
 
@@ -1289,7 +1290,6 @@ nav {
       observer.observe(el);
     });
   } else {
-    // Fallback: show all
     fadeEls.forEach(function (el) {
       el.classList.add('visible');
     });
